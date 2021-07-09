@@ -96,13 +96,13 @@ window.addEventListener('load', () => {
                         document.body.style.backgroundImage = "url('images/thunderstrom.jpg')";
                     }
                     else if (id < 400 && id >= 300) {
-                        document.body.style.backgroundImage = "url('images/cloudy.jpg')";
+                        document.body.style.backgroundImage = "url('images/clouds.jpg')";
                     }
                     else if (id < 600 && id >= 500) {
                         document.body.style.backgroundImage = "url('images/rain.jpg')";
                     }
                     else if (id < 700 && id >= 600) {
-                        document.body.style.backgroundImage = "url('images/snow.jpg')";
+                        document.body.style.backgroundImage = "url('images/snowy.jpg')";
                     }
                     else if (id < 800 && id >= 700) {
                         document.body.style.backgroundImage = "url('images/mist.jpg')";

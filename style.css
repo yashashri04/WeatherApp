@@ -3,12 +3,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* body,html{
+    height: 100%;
+} */
 body{
            background-color: rgb(5, 11, 66);
            background-repeat: no-repeat;
-           background-size: cover;
-           background-position: center;
-           height:100%;
+           background-position: center center;
+           background-attachment: fixed;
+           background-size:cover;
            width:100%;
 
 }
@@ -89,7 +92,7 @@ body{
 #date{
     padding-top: 5px;
     color: crimson;
-    font-weight: 550;
+    font-weight: 500;
 }
 
 

@@ -15,10 +15,9 @@ searchButton.addEventListener('click', (e) => {
 
 const getResults = async (city) => {
     try {
-        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`, { mode: 'cors' });
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`);
 
         const data = await response.json();
-        console.log(data);
         loc.innerText = data.name;
         const { feels_like } = data.main;
         const weatherInfo = data.weather[0];
@@ -27,7 +26,7 @@ const getResults = async (city) => {
         temp.innerText = Math.round(feels_like - 273);
         icon.src = `http://openweathermap.org/img/w/${weatherInfo.icon}.png`;
         document.getElementById('cityNotFound').style.display = 'none';
-        document.body.style.backgroundColor='none';
+        document.body.style.backgroundColor = 'none';
 
         if (id < 300 && id >= 200) {
             document.body.style.backgroundImage = "url('images/thunderstrom.jpg')";
@@ -76,13 +75,12 @@ window.addEventListener('load', () => {
             fetch(api).then((response) => {
                 if (response.status >= 200 && response.status <= 299) {
                     return response.json();
-                  }
-                   else {
+                }
+                else {
                     throw Error(response.statusText);
-                  }
+                }
             })
                 .then(data => {
-                    console.log(data);
                     loc.innerText = data.name;
                     const { feels_like } = data.main;
                     const weatherInfo = data.weather[0];
@@ -90,7 +88,7 @@ window.addEventListener('load', () => {
                     climate.innerText = weatherInfo.main;
                     temp.innerText = Math.round(feels_like - 273);
                     icon.src = `http://openweathermap.org/img/w/${weatherInfo.icon}.png`;
-                    document.body.style.backgroundColor='none';
+                    document.body.style.backgroundColor = 'none';
 
                     if (id < 300 && id >= 200) {
                         document.body.style.backgroundImage = "url('images/thunderstrom.jpg')";
@@ -117,13 +115,13 @@ window.addEventListener('load', () => {
 
                 })
                 .catch((error) => {
-                    document.getElementById('cityNotFound').innerText="Couldn't find your location!";
+                    document.getElementById('cityNotFound').innerText = "Couldn't find your location!";
                     document.getElementById('cityNotFound').style.display = 'block';
                     icon.src = `images/doubtful.png`;
                 });
         })
     }
-    
+
 })
 
 

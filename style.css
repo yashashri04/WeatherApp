@@ -3,9 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* body,html{
-    height: 100%;
-} */
 body{
            background-color: rgb(5, 11, 66);
            background-repeat: no-repeat;
@@ -45,7 +42,7 @@ body{
 }
 #searchButton{
     color: #ffffff;
-    background: #df1e4e;
+    background: #c43055;
     border: none;
     padding: 9px;
     border-radius: 2px;
@@ -100,6 +97,10 @@ body{
     .main{
         width: 50%;
     }
+    #location,#temp{
+        font-weight: bold;
+        font-size: 1.9rem;
+    }
   }
 
 @media screen and (max-width: 550px) {
@@ -112,11 +113,20 @@ body{
     #searchButton{
         padding: 8px;
     }
+    
   }  
 
  @media screen and (max-width: 400px) {
     .main{
         width: 90%;
     }
-    
-  }    
+  }
+  @media screen and (max-width: 320px) {
+    #location ,#temp{
+        font-weight: bold;
+        font-size: 1.6rem;
+    }
+    #degree{
+        font-size: 1.3rem;
+    }
+  }       
